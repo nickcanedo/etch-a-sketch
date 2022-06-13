@@ -1,5 +1,6 @@
 // set default grid size to 16x16
 const grid = document.querySelector(".grid");
+let mode = "draw";
 
 let gridDimension = 16;
 window.addEventListener("load", gridSize(gridDimension));
@@ -93,7 +94,12 @@ colorPalette.addEventListener("input", function(e) {
 // manage click event (hover can create unwanted drawing) for grid drawing
 function squareClick(e) {
     if (drag) {
-        e.target.style.backgroundColor = currentColor;
+        if (mode !== "rainbow") {
+            e.target.style.backgroundColor = currentColor;
+        } else {
+            e.target.style.backgroundColor = randomColor();
+        }
+        
     }
 }
 
@@ -139,6 +145,7 @@ const eraseBtn = document.querySelector(".eraser");
 let storageColor;
 
 function eraser(e) {
+    mode = "eraser";
     storageColor = currentColor;
     currentColor = "#fffffe";
 }
@@ -149,7 +156,23 @@ eraseBtn.addEventListener("click", eraser)
 const drawBtn = document.querySelector(".draw");
 
 function drawMode(e) {
+    mode = "draw";
     currentColor = storageColor;
 }
 
 drawBtn.addEventListener("click", drawMode);
+
+//rainbow mode functionality
+const rainbowBtn = document.querySelector(".rainbow");
+
+rainbowBtn.addEventListener("click", rainbowMode);
+
+function rainbowMode() {
+    storageColor = currentColor;
+    mode = "rainbow";
+}
+
+function randomColor() {
+    let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    return randomColor;
+}
