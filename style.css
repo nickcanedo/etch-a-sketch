@@ -4,6 +4,7 @@
     --para: #abd1c6;
     --button: #f9bc60;
     --buttonText: #001e1d;
+    --selected: #e16162;
 }
 
 * {
@@ -64,6 +65,10 @@ body {
     width: 450px;
     height: 450px;
     background-color: var(--headline);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
 }
 
 button {
@@ -97,4 +102,15 @@ button {
 .hover {
     transform: scale(1.04);
     background-color: #a67e42;
+}
+
+.size {
+    color: var(--para);
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.slider {
+    margin-top: 20px;
 }
