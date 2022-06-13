@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/040e3267e7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="https://en.wikipedia.org/wiki/Etch_A_Sketch"><h1>ETCH-A-SKETCH</h1></a>
+    </header>
+    <main class="main">
+        <div class="options">
+            <button class="draw">Draw Mode</button>
+            <button class="rainbow">Rainbow Mode</button>
+            <button class="eraser">Eraser Mode</button>
+            <button class="clear">Clear Canvas</button>
+            <button class="size">Canvas Size</button>
+        </div>
+        <div class="grid">
+            
+        </div>
+        <div class="colorPicker">
+            <p class="colorTitle">Color Picker</p>
+            <input type="color" class="color"></input>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Copyright ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            Nicolas Rebollo
+            <a href="https://github.com/nickcanedo/"><i class="fa-brands fa-github fa-lg"></i></a>
+        </p>
+    </footer>
+</body>
+</html>

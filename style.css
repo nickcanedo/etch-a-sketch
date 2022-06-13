@@ -1,0 +1,100 @@
+:root {
+    --background: #004643;
+    --headline: #fffffe;
+    --para: #abd1c6;
+    --button: #f9bc60;
+    --buttonText: #001e1d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+}
+
+a {
+    text-decoration: none;
+    color: var(--headline);
+}
+
+.header {
+    font-family: 'Fascinate', cursive;
+    color: var(--headline);
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.footer {
+    color: var(--para);
+    margin-bottom: 15px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+    margin-left: -80px;
+}
+
+.grid {
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background-color: var(--headline);
+}
+
+button {
+    background-color: var(--button);
+    color: var(--buttonText);
+    font-size: 16px;
+    font-weight: bold;
+    width: 240px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+    transition: all 0.06s ease;
+}
+
+.colorPicker {
+    text-align: center;
+    color: var(--para);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.color {
+    width: 150px;
+    height: 150px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hover {
+    transform: scale(1.04);
+    background-color: #a67e42;
+}
